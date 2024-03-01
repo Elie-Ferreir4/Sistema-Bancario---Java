@@ -1,5 +1,4 @@
 # Sistema-Bancario---Java
-Um sistema bancario feito em Java, Objetos, Classes
 
 Sistema de Contas Bancárias em Java
 

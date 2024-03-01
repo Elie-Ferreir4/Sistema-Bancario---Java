@@ -33,6 +33,9 @@ Abra o projeto em sua IDE preferida.
 
 Execute o aplicativo a partir da classe principal Main.java.
 
+![Texto alternativo](Sistema-Bancario---Java/Banco/terminal.png)
+
+
 Siga as instruções no terminal para criar contas, acessar contas, realizar transações e consultar saldos.
 
 Contribuições

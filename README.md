@@ -1,5 +1,7 @@
 # Sistema Bancário em Java
 
+(Atenção este codigo ainda esta em desenvolvimento)
+
 Este é um sistema bancário simples desenvolvido em Java como parte de um projeto acadêmico ou de aprendizado.
 
 ## Funcionalidades

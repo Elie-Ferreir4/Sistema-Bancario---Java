@@ -1,44 +1,37 @@
-# Sistema-Bancario---Java
+# Sistema Bancário em Java
 
-Sistema de Contas Bancárias em Java
+Este é um sistema bancário simples desenvolvido em Java como parte de um projeto acadêmico ou de aprendizado.
 
-Este é um sistema simples de contas bancárias desenvolvido em Java. Ele permite aos usuários criar contas bancárias e acessá-las posteriormente.
-Funcionalidades
+## Funcionalidades
 
-    Criar conta: Os usuários podem criar uma nova conta bancária fornecendo seu nome e agência.
-    Acessar conta: Os usuários podem acessar uma conta bancária existente fornecendo seu nome e agência. Se as informações estiverem corretas, a conta é acessada; caso contrário, o acesso é negado.
-    Sair: Os usuários podem optar por sair do sistema a qualquer momento.
+O sistema oferece as seguintes funcionalidades:
 
-Estrutura do Projeto
+1. **Cadastro de Clientes:** Permite o cadastro de novos clientes com informações básicas como nome e agência.
+   
+2. **Abertura de Contas:** Os clientes podem abrir contas bancárias com um saldo inicial definido.
 
-O projeto é composto por dois arquivos principais:
+3. **Transações Financeiras:** Os clientes podem realizar depósitos e saques em suas contas.
 
-    Main.java: Este arquivo contém o método principal main que inicializa o sistema e interage com o usuário através de um loop de entrada.
-    User.java: Este arquivo define a classe User, que representa um usuário do sistema de contas bancárias. Ele contém os atributos de nome e agência do usuário, além de métodos para acessar e modificar esses atributos.
+4. **Consulta de Saldo:** Os clientes podem consultar o saldo disponível em suas contas.
 
-Pré-requisitos
+## Requisitos do Sistema
 
-    Java Development Kit (JDK) instalado na máquina.
+- Java Development Kit (JDK) 8 ou superior instalado.
+- Ambiente de desenvolvimento integrado (IDE) como Eclipse, IntelliJ IDEA, ou similar.
 
-Como Executar
+## Como Executar
 
-    Clone ou faça o download deste repositório para o seu ambiente local.
-    Navegue até o diretório onde os arquivos estão localizados.
-    Compile os arquivos Java executando o seguinte comando no terminal:
+1. Clone o repositório para o seu ambiente local:
 
-bash
+```bash
+git clone https://github.com/seu-usuario/sistema-bancario-java.git
 
-javac Main.java User.java
+    Abra o projeto em sua IDE preferida.
 
-    Execute o arquivo compilado Main.class usando o seguinte comando:
+    Execute o aplicativo a partir da classe principal Main.java.
 
-bash
+    Siga as instruções no terminal para criar contas, acessar contas, realizar transações e consultar saldos.
 
-java Main
+Contribuições
 
-Contribuição
-
-Contribuições são bem-vindas! Se você encontrar problemas ou tiver sugestões de melhorias, sinta-se à vontade para abrir uma issue neste repositório ou enviar um pull request.
-
-
-            
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues para reportar bugs, sugerir novas funcionalidades ou enviar pull requests.

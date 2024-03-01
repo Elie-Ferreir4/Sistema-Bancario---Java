@@ -40,6 +40,8 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir issues para repo
 ## Codigo
 
 ```java
+import User.Account.User;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -54,10 +56,10 @@ public class Main {
             System.out.println("C-Criar conta, A-Acessar conta, E-Sair");
             String choice = input.nextLine();
 
-            switch (choice) {
+            switch (choice){
                 case "C", "c":
 
-                    System.out.println("Voce escolheu criar conta");
+                    System.out.println("voce escolheu criar conta");
 
                     System.out.println("Digite seu nome: ");
                     String nome = input.nextLine();
@@ -65,75 +67,43 @@ public class Main {
                     System.out.println("Digite sua agencia: ");
                     String agencia = input.nextLine();
 
-                    System.out.println("Digite o saldo inicial: ");
-                    double saldoInicial = input.nextDouble();
-
-                    User user = new User(nome, agencia, saldoInicial);
+                    User user = new User(nome, agencia);
                     users.add(user);
 
-                    System.out.println("Conta criada com sucesso!");
-                    System.out.println(user);
+                    System.out.println(users.get(0).toString());
+                    System.out.println(users.get(contaConta).toString());
                     contaConta++;
                     break;
 
                 case "a", "A":
-                    System.out.println("Voce escolheu acessar conta");
+                    System.out.println("voce escolheu acessar conta");
+                    System.out.println(" ");
 
+                    System.out.println("Conteúdo do ArrayList: " + users);
+
+                    System.out.println(" ");
                     System.out.println("Digite seu nome: ");
                     nome = input.nextLine();
 
                     System.out.println("Digite sua agencia: ");
                     agencia = input.nextLine();
 
-                    boolean contaEncontrada = false;
 
-                    for (User currentUser : users) {
-                        if (currentUser.getUserName().equals(nome) && currentUser.getUserAgency().equals(agencia)) {
-                            contaEncontrada = true;
-                            System.out.println("Conta acessada com sucesso!");
-                            System.out.println(currentUser);
-                            System.out.println("Escolha a operacao:");
-                            System.out.println("D - Deposito");
-                            System.out.println("S - Saque");
-                            System.out.println("V - Ver Saldo");
-                            String opcao = input.nextLine();
-
-                            switch (opcao.toUpperCase()) {
-                                case "D":
-                                    System.out.println("Digite o valor do deposito: ");
-                                    double deposito = input.nextDouble();
-                                    currentUser.deposit(deposito);
-                                    System.out.println("Deposito realizado com sucesso!");
-                                    break;
-                                case "S":
-                                    System.out.println("Digite o valor do saque: ");
-                                    double saque = input.nextDouble();
-                                    if (currentUser.withdraw(saque)) {
-                                        System.out.println("Saque realizado com sucesso!");
-                                    } else {
-                                        System.out.println("Saldo insuficiente para realizar o saque.");
-                                    }
-                                    break;
-                                case "V":
-                                    System.out.println("Saldo atual: " + currentUser.getBalance());
-                                    break;
-                                default:
-                                    System.out.println("Opcao invalida.");
-                                    break;
-                            }
+                    for (User nameuser : users) {
+                        if (nameuser.getUserName().equals(nome) && nameuser.getUserAgency().equals(agencia)) {
+                            System.out.println("conta acessada");
+                        } else {
+                            System.out.println("acesso negado");
                         }
                     }
 
-                    if (!contaEncontrada) {
-                        System.out.println("Conta nao encontrada.");
-                    }
+
+                    System.out.println(users);
+
 
                     break;
                 case "e", "E":
-                    System.out.println("Voce escolheu sair");
-                    return;
-                default:
-                    System.out.println("Opcao invalida.");
+                    System.out.println("voce escolheu sair");
                     break;
             }
 
@@ -141,73 +111,16 @@ public class Main {
 
     }
 }
-
 ```
 
 ##package
 
 ```java
-class User {
-    private String userName;
-    private String userAgency;
-    private double balance;
-
-    public User(String name, String agency, double initialBalance) {
-        setNameUser(name);
-        setAgency(agency);
-        setBalance(initialBalance);
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public String getUserAgency() {
-        return userAgency;
-    }
-
-    public double getBalance() {
-        return balance;
-    }
-
-    private void setNameUser(String name) {
-        userName = name;
-    }
-
-    private void setAgency(String agency) {
-        userAgency = agency;
-    }
-
-    private void setBalance(double initialBalance) {
-        balance = initialBalance;
-    }
-
-    public void deposit(double amount) {
-        balance += amount;
-    }
-
-    public boolean withdraw(double amount) {
-        if (amount <= balance) {
-            balance -= amount;
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    @Override
-    public String toString() {
-        return "Usuario: " + userName + ", Agencia: " + userAgency + ", Saldo: " + balance;
-    }
-}
-
-```java
-import java.util.ArrayList;
+package User.Account;
 
 public class User {
     private String userName;
     private String userAgency;
-    private double cash;
 
 
     public User (String name, String agency) {
@@ -236,4 +149,3 @@ public class User {
         return "Usuario: " + userName + " Agencia: " + userAgency;
     }
 }
-

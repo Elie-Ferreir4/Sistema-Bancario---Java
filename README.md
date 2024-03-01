@@ -25,16 +25,19 @@ O sistema oferece as seguintes funcionalidades:
 
 ```bash
 git clone https://github.com/seu-usuario/sistema-bancario-java.git
+```
 
-    Abra o projeto em sua IDE preferida.
+Abra o projeto em sua IDE preferida.
 
-    Execute o aplicativo a partir da classe principal Main.java.
+Execute o aplicativo a partir da classe principal Main.java.
 
-    Siga as instruções no terminal para criar contas, acessar contas, realizar transações e consultar saldos.
+Siga as instruções no terminal para criar contas, acessar contas, realizar transações e consultar saldos.
 
 Contribuições
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues para reportar bugs, sugerir novas funcionalidades ou enviar pull requests.
+
+## Codigo
 
 ```java
 import java.util.ArrayList;
@@ -139,6 +142,11 @@ public class Main {
     }
 }
 
+```
+
+##package
+
+```java
 class User {
     private String userName;
     private String userAgency;
